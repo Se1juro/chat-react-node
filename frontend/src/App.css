@@ -143,6 +143,10 @@ textarea{
     .container-chat{
         width: 100%;
     }
-
+}
+@media screen and (max-width: 1024px){
+    textarea{
+        width: 20em !important;
+    }
 
 }

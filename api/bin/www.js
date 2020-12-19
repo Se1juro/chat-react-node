@@ -6,7 +6,7 @@ const port = normalizePort(process.env.PORT);
 app.set('port', port);
 
 const server = http.createServer(app);
-
+/* SOCKET IO */
 const io = require('socket.io')(server);
 io.on('connection', (socket) => {
     let usuario;
@@ -19,6 +19,7 @@ io.on('connection', (socket) => {
         })
     })
     socket.on('mensaje', async ({user, message}) => {
+        usuario = user.user.name + " " + user.user.lastname;
         io.emit('mensajes', {
             user: `${user.user.name} ${user.user.lastname}`,
             role: user.user.role,
@@ -30,7 +31,7 @@ io.on('connection', (socket) => {
         io.emit("mensajes", {user: usuario, message: "Ha abandonado el chat"})
     })
 })
-/* SOCKET IO */
+
 server.listen(port);
 server.on('error', onError);
 server.on('listening', onListening);

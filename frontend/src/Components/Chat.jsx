@@ -33,6 +33,7 @@ function Chat(user) {
     const submitMessage = (e) => {
         e.preventDefault();
         socket.emit('mensaje', {user, message});
+        setMessage("");
     }
     return (
         <div className={"container-chat"}>
@@ -47,7 +48,7 @@ function Chat(user) {
             </div>
             <form onSubmit={submitMessage} id={"form-mensaje"}>
                 <label htmlFor="" style={{color: "white"}}>Escribe un mensaje aquí </label>
-                <textarea name="" id="" cols="30" rows="10" onChange={e => setMessage(e.target.value)}
+                <textarea name="message" id="message" cols="30" rows="10" onChange={e => setMessage(e.target.value)}
                           value={message}/>
                 <input type={"submit"} value={"enviar"}/>
             </form>
