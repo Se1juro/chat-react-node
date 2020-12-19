@@ -62,7 +62,7 @@ function Register(props) {
                     <input type="password" required name={"password"} onChange={handleInputChange}
                            placeholder={"Ingresa tu contraseña"}/>
                 </div>
-                <NavLink to={"/login"}>¿No tienes cuenta? Inicia Sesión aquí</NavLink>
+                <NavLink to={"/login"}>¿Tienes cuenta? Inicia Sesión aquí</NavLink>
 
                 <input type="submit" value={"Registrarse"}/>
             </form>

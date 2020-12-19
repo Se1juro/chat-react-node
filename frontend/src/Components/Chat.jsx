@@ -26,7 +26,6 @@ function Chat(user) {
     const getMessages = async () => {
         const res = await messageServices.getMessages();
         if (res.status === 200) {
-            console.log(res.data)
             setMessages(res.data)
         }
     }
