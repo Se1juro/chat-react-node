@@ -1,0 +1,148 @@
+.App{
+    background: #ad80dd;
+    padding: 20px;
+    height: 100vh;
+}
+h1{
+    color: white;
+    text-align: center;
+}
+.contenedor-register{
+    height: 100%;
+}
+.contenedor-register>h1{
+    text-align: center;
+    font-size: 50px;
+    color: white;
+    text-transform: uppercase;
+    margin-bottom: 1em;
+}
+.contenedor-register>form{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+form>.form-group{
+    width: 100%;
+    display: flex;
+    text-align: left;
+    color: white;
+    margin-bottom: 1em;
+    justify-content: center;
+}
+form>.form-group>label{
+    width: 13em;
+}
+input{
+    outline: none;
+    height: 2em;
+    width: 20em;
+    border-radius: 10px;
+    border: none;
+    padding: 5px;
+}
+input[type="submit"]{
+    border: 3px solid #531553;
+    background: white;
+    cursor: pointer;
+    height: 3em;
+    margin-top: 1em;
+}
+
+.container-home{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.container-home>h1{
+    color: white;
+    text-align: center;
+}
+.container-home>.container{
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.video-clase{
+    margin-top: 2em;
+    width: 40em;
+    height: 30em;
+}
+.container-logout{
+    width: 10em;
+    margin-bottom: 2em;
+}
+.container-logout>h3{
+    text-align: center;
+    cursor: pointer;
+    color: white;
+}
+.container-logout>h3:hover{
+    border-bottom: 3px solid white;
+    transition: .3s;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.container-chat{
+    margin-left: 1em;
+    width: 50em;
+}
+textarea{
+    outline: none;
+    padding: 10px;
+    width: 50em;
+    height: 10em;
+}
+#form-mensaje{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+#form-mensaje label{
+    margin-bottom: 1em;
+}
+.container-show-messages{
+    max-height: 10em;
+    overflow: auto;
+}
+.rol{
+    font-weight: bold;
+}
+.remitente{
+    color: white;
+}
+.mensaje{
+    color: black;
+}
+@media screen and (max-width: 859px){
+    .App{
+        height: auto;
+    }
+    .video-clase{
+        margin-top: 2em;
+        width: 22em;
+        height: 20em;
+    }
+    .container-home{
+        flex-direction: column;
+    }
+    .container-chat{
+        margin-left: 0;
+    }
+    textarea{
+        width: 100% !important;
+    }
+    .container-chat{
+        width: 100%;
+    }
+
+
+}
